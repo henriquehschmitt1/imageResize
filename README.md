@@ -50,34 +50,7 @@ git clone <YOUR_REPOSITORY_URL>
 cd <repository-name>
 ````
 
-### 2\. Configure LocalStack
-
-This project assumes you have a `docker-compose.yml` file to start LocalStack. If you don't have one, you can use the example below.
-
-\<details\>
-\<summary\>Click to see a sample \<b\>docker-compose.yml\</b\>\</summary\>
-
-```yaml
-# docker-compose.yml
-version: "3.8"
-
-services:
-  localstack:
-    container_name: "localstack-main"
-    image: localstack/localstack:latest
-    ports:
-      - "127.0.0.1:4566:4566"            # LocalStack Gateway
-      - "127.0.0.1:4510-4559:4510-4559"  # External services
-    environment:
-      - DEBUG=${DEBUG:-0}
-    volumes:
-      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
-      - "/var/run/docker.sock:/var/run/docker.sock"
-```
-
-\</details\>
-
-### 3\. Start LocalStack
+### 2\. Start LocalStack
 
 Start your local cloud environment. If you're using `colima` on macOS, start it first.
 
@@ -86,10 +59,10 @@ Start your local cloud environment. If you're using `colima` on macOS, start it 
 colima start
 
 # Start the LocalStack container
-docker-compose up -d
+localstack start
 ```
 
-### 4\. Install Project Dependencies
+### 3\. Install Project Dependencies
 
 Navigate into the Lambda function's directory and install the required `npm` packages.
 
@@ -99,7 +72,7 @@ npm install
 cd ..
 ```
 
-### 5\. Run the Setup Script
+### 4\. Run the Setup Script
 
 Execute the setup script from the project root. This will create the S3 buckets, IAM Role, and Lambda function inside your LocalStack container.
 
