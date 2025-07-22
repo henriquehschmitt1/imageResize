@@ -1,6 +1,4 @@
-Aqui está o conteúdo completo para o seu arquivo. Copie todo o texto dentro do bloco de código abaixo e salve-o em um arquivo chamado `README.md`.
 
-````markdown
 # Serverless Image Resizing Pipeline with AWS Lambda, S3, and LocalStack
 
 This project demonstrates an event-driven serverless architecture for automatically resizing images uploaded to an S3 bucket. It uses AWS Lambda, S3, and IAM, all running locally via LocalStack for easy development and testing.
@@ -194,7 +192,4 @@ To stop the LocalStack container:
 
 ```bash
 docker-compose down
-```
-
-```
 ```
