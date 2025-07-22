@@ -46,8 +46,8 @@ Follow these steps to set up and run the project locally.
 
 Clone this project to your local machine.
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd <repository-name>
+git clone imageResize
+cd imageResize
 ````
 
 ### 2\. Start LocalStack
