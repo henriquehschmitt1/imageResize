@@ -1,0 +1,14 @@
+# Dependências
+node_modules/
+
+# Pasta de build do TypeScript
+dist/
+
+# Arquivo de deploy da Lambda
+lambda-deployment.zip
+
+# Arquivos de saída e temporários
+output.json
+
+# Arquivos de sistema operacional
+.DS_Store

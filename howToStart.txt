@@ -1,0 +1,16 @@
+Start colima/docker
+Start localstack
+run setup-localstack.sh
+
+insert into originais 
+awslocal s3 cp ~/Downloads/fotoLinkedin.jpeg s3://bucket-originais/ --no-sign-request
+
+docker logs
+docker logs -f localstack-main
+
+lambda logs
+awslocal logs tail /aws/lambda/processador-de-imagens-ts --follow
+
+Buckets urls
+http://bucket-redimensionadas.s3.localhost.localstack.cloud:4566/
+http://bucket-originais.s3.localhost.localstack.cloud:4566/
