@@ -28,5 +28,6 @@ echo "--> Creating final deployment package on your Desktop..."
 cd ./build
 zip -r ~/Desktop/deployment-package.zip .
 cd ..
+rm -rf ./build
 
 echo "✅ Build complete! 'deployment-package.zip' is on your Desktop and ready for deployment."
