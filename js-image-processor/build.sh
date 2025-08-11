@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script builds the Lambda package inside a Docker container and saves it to the Desktop.
-
+rm -rf ./build
 set -e
 
 IMAGE_NAME="image-opt-builder"
